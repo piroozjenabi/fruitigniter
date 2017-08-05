@@ -11,7 +11,7 @@
 <li> Very power full support by <a href='http://www.piero.ir'> piero group </a> [pirooz jenabi administrator] </li>
 </ul>
 
-<h3> Fast Example </h3>
+<h3> Fast user guide  </h3>
 <pre>
         $this->load->library("Fruit_igniter");// load library
         $this->fruit_igniter->table="fruit_group"; // define table for database
