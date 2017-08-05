@@ -1,6 +1,10 @@
 # Fruitigniter <small> V0.5 BETA </small>
 <h3> Power full code igniter CRUD library use ajax and datatable</h3>
 <p> you can easy install and use this library for your project </p>
+<img src="http://www.piero.ir/fruitigniter/screenshot/fruitigniter-sc1.jpg" alt="list" >
+<img src="http://www.piero.ir/fruitigniter/screenshot/fruitigniter-sc2.jpg" alt="add" >
+
+
 <h3> Why use Fruitigniter ? </h3>
 <ul>
 <li> Very easy install [just 3 step] </li>
