@@ -26,11 +26,11 @@
 
 
 <h3> easy install </h3>
-<ul>
+<ol>
 <li> Copy Fruit_igniter.php and Fruit_igniter_core.php library in your project </li>
 <li> Copy fruit_view.php in root view folder in your project  </li>
 <li> Copy Fruit_igniter_lang.php in you language folder  </li>
-</ul>
+</ol>
 <p> Your installing is finish . for use fruit igniter just define controller very easy like fast example .</p>
 
 <b> Copy right by  <a href="http://www.piero.ir" >piero.ir </a> </b>
