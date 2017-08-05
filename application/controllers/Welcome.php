@@ -15,5 +15,5 @@ class Welcome extends CI_Controller {
         $this->fruit_igniter->column_search=array("name","des");
         $this->fruit_igniter->render();
 	}
-    
+
 }
