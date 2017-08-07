@@ -1,11 +1,15 @@
-# Fruitigniter <small> V0.5 BETA </small>
-<h3> Power full code igniter CRUD library use ajax and datatable</h3>
+# Fruitigniter 
+
+<h3> Make awesome crud (Create , Read , Update , Delete ) for codeigniter like eat fruit<small> V0.5 BETA </small></h3>
 <p> you can easy install and use this library for your project </p>
+
+<h4> Screen shot  </h4>
 <img src="http://www.piero.ir/fruitigniter/screenshot/fruitigniter-sc1.jpg" alt="list" >
+<br/>
 <img src="http://www.piero.ir/fruitigniter/screenshot/fruitigniter-sc2.jpg" alt="add" >
 
 
-<h3> Why use Fruitigniter ? </h3>
+<h3> Why use Fruitigniter for make crud in codeigniter ? </h3>
 <ul>
 <li> Very easy install [just 3 step] </li>
 <li> Very easy use of library [just define in controller] </li>
@@ -13,6 +17,7 @@
 <li> Full ajax [dont need refresh page]  </li>
 <li> Make for very big data  [ limit and controll all data ] </li>
 <li> Very power full support by <a href='http://www.piero.ir'> piero group </a> [pirooz jenabi administrator] </li>
+<li> very language support [english,persian,other coming soon] </li>
 </ul>
 
 <h3> Fast user guide  </h3>
