@@ -522,59 +522,25 @@ class Fruit_igniter{
 
             function _delete_(id)
             {
-                (new PNotify({
-                    title: '<?=_MESSAGE?>',
-                    text: '<?=_ASK_DELETE ?>',
-                    icon: 'fa fa-close fa-5x ',
-                    hide: false,
-                    confirm: {
-                        confirm: true,
-                        buttons: [{
-                            text: '<?=_YES?>',
-                            addClass: 'btn-primary',
-                            click: function(notice) {
-                                // ajax delete data to database
-                                $.ajax({
-                                    url : "<?= $url?>",
-                                    type: "POST",
-                                    dataType: "JSON",
-                                    data:{"typeIn":"delete","id":id},
-                                    success: function(data)
-                                    {
-                                        piero_message();
-                                        reload_table();
-                                        notice.remove();
-                                    },
-                                    error: function (jqXHR, textStatus, errorThrown)
-                                    {
-                                        piero_alert("<?=_ERROR ?>","<?=_ERROR_DELETE ?>");
-                                    }
-                                });
+                _res=confirm('<?=_ASK_DELETE ?>');
+                if(_res){
+                    // ajax delete data to database
+                    $.ajax({
+                        url : "<?= $url?>",
+                        type: "POST",
+                        dataType: "JSON",
+                        data:{"typeIn":"delete","id":id},
+                        success: function(data)
+                        {
+                            reload_table();
+                        },
+                        error: function (jqXHR, textStatus, errorThrown)
+                        {
+                           alert("<?=_ERROR_DELETE ?>");
+                        }
+                    });
 
-                            }},
-                            {
-                                text: '<?=_CANCEL?>',
-                                addClass: 'btn',
-                                click: function(notice) {
-                                    notice.remove();
-                                }
-
-                            }]
-                    },
-                    buttons: {
-                        closer: false,
-                        sticker: false
-                    },
-                    history: {
-                        history: false
-                    },
-                    addclass: 'stack-modal',
-                    stack: {
-                        'dir1': 'down',
-                        'dir2': 'right',
-                        'modal': true
-                    }
-                }));
+                }
 
             }
 

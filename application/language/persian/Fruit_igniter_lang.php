@@ -31,3 +31,5 @@ define("_ASK_DELETE","آیای مطمین به حذف اطلاعات هستید 
 define("_YES","بله");
 define("_NO","خیر");
 define("_IS_REQUIRED","اجباری می باشد");
+define("_FALSE","غیر فعال");
+define("_TRUE","فعال");

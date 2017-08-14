@@ -30,4 +30,5 @@ define("_MESSAGE","Message");
 define("_ASK_DELETE","Are you sere to delete ?");
 define("_YES","Yes");
 define("_NO","No");
-define("_IS_REQUIRED","اجباری می باشد");
+define("_FALSE","false");
+define("_TRUE","true");
