@@ -19,6 +19,8 @@ class Fruit_igniter_core{
         //load css and js
         $this->load_css("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
         $this->load_css("https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css");
+        $this->load_css("https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css");
+        $this->load_css("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 
         $this->load_js("https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js");
