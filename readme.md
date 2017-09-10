@@ -53,4 +53,34 @@
 </ol>
 <p> Your installing is finish . for use fruit igniter just define controller very easy like fast example .</p>
 
+<h3> database sql   </h3>
+<pre>
+create table fruit_group
+(
+	id int auto_increment
+		primary key,
+	name varchar(255) null,
+	des text null
+);
+create table fruit
+(
+	id int auto_increment
+		primary key,
+	group_id int null,
+	state int null,
+	name varchar(100) null,
+	date_create varchar(100) null,
+	date_eat varchar(100) null,
+	tase varchar(100) null,
+	price int null,
+	des text null,
+	constraint fruit_fruit_group_id_fk
+		foreign key (group_id) references fruit_group (id)
+			on delete cascade);
+create index fruit_fruit_group_id_fk
+	on fruit (group_id)
+;
+</pre>
 <b> Copy right by  <a href="http://www.piero.ir" >piero.ir </a> </b>
+
+
