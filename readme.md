@@ -81,6 +81,10 @@ create index fruit_fruit_group_id_fk
 	on fruit (group_id)
 ;
 </pre>
+<h3> Last Changes </h3>
+<ol>
+<li> in language unique define for avoid conflicts   </li>
+</ol>
 <b> Copy right by  <a href="http://www.piero.ir" >piero.ir </a> </b>
 
 

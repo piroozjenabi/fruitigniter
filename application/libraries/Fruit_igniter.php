@@ -260,9 +260,9 @@ class Fruit_igniter{
         ?>
         <div class="btn-group" style="padding: 5px;">
         <?php if($this->permision["add"]):?>
-        <button class="btn btn-success" onclick="_add_()"><i class="fa fa-plus"></i> <?= _ADD ?> </button>
+        <button class="btn btn-success" onclick="_add_()"><i class="fa fa-plus"></i> <?= _FRUIT_ADD ?> </button>
         <?php endif; ?>
-        <button class="btn btn-default" onclick="reload_table()"><i class="fa fa-refresh"></i> <?= _REFRESH ?> </button>
+        <button class="btn btn-default" onclick="reload_table()"><i class="fa fa-refresh"></i> <?= _FRUIT_REFRESH ?> </button>
         <?=$this->actions?>
         </div>
         <?php
@@ -280,7 +280,7 @@ class Fruit_igniter{
                 <th><?=$k?></th>
                 <?php endforeach; ?>
                 <?php if ($this->permision["edit"] || $this->permision["delete"]): ?>
-                    <th><?=_OP ?></th>
+                    <th><?=_FRUIT_OP ?></th>
                 <?php endif; ?>
             </tr>
             </thead>
@@ -293,7 +293,7 @@ class Fruit_igniter{
                     <th><?=$k?></th>
                 <?php endforeach; ?>
                 <?php if ($this->permision["edit"] || $this->permision["delete"]): ?>
-                <th><?=_OP ?>
+                <th><?=_FRUIT_OP ?>
                 </th>
                  <?php endif; ?>
             </tr>
@@ -332,8 +332,8 @@ class Fruit_igniter{
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" id="btnSave" onclick="save()" class="btn btn-primary"><?= _SAVE?></button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal"><?= _CANCEL ?></button>
+                        <button type="button" id="btnSave" onclick="save()" class="btn btn-primary"><?= _FRUIT_SAVE?></button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal"><?= _FRUIT_CANCEL ?></button>
 
                     </div>
                 </div><!-- /.modal-content -->
@@ -372,16 +372,16 @@ class Fruit_igniter{
                     ], stateSave: true,
                     scrollY:'50vh'  ,
 
-                    "lengthMenu": [[10, 25, 50,100,200,500, -1], [10, 25, 50, 100 , 200 , 500 ,"<?=_ALL ?>"]],
+                    "lengthMenu": [[10, 25, 50,100,200,500, -1], [10, 25, 50, 100 , 200 , 500 ,"<?=_FRUIT_ALL ?>"]],
                     dom: 'Blfrtip',
                     buttons: [
                         {
                             extend: 'colvis',
-                            text: '<i class="fa fa-table" ></i>  <?=_VIEW.__._COLUMNS ?> '
+                            text: '<i class="fa fa-table" ></i>  <?=_FRUIT_VIEW._FRUIT__._FRUIT_COLUMNS ?> '
                         },
                         {
                             extend: 'copy',
-                            text: '<i class="fa fa-copy" > </i> <?=_COPY ?> '
+                            text: '<i class="fa fa-copy" > </i> <?=_FRUIT_COPY ?> '
                         },
                         {
                             extend: 'csv',
@@ -393,19 +393,19 @@ class Fruit_igniter{
                         },
                     ],
                     "language": {
-                        "lengthMenu": "<?=_VIEW?> _MENU_ <?= _PER_PAGE ?>",
-                        "zeroRecords": "<?=_NOT_FOUND?>",
-                        "info": "<?= _VIEW_PAGE?> _PAGE_ <?=_OF?> _PAGES_",
-                        "infoEmpty": "<?=_NOT_FOUND?>",
-                        "infoFiltered": "(<?= _FILTERED_FROM ?> _MAX_ <?=_RECORD?>)",
+                        "lengthMenu": "<?=_FRUIT_VIEW?> _MENU_ <?= _FRUIT_PER_PAGE ?>",
+                        "zeroRecords": "<?=_FRUIT_NOT_FOUND?>",
+                        "info": "<?= _FRUIT_VIEW_PAGE?> _PAGE_ <?=_FRUIT_OF?> _PAGES_",
+                        "infoEmpty": "<?=_FRUIT_NOT_FOUND?>",
+                        "infoFiltered": "(<?= _FRUIT_FILTERED_FROM ?> _MAX_ <?=_FRUIT_RECORD?>)",
                         "search": "<i class='fa fa-search '>",
                         "pagingType": "full_numbers",
                         "processing": "<div class='loading' > </div>",
                         "oPaginate": {
-                            "sFirst":    	"<?= _FIRST?> <i class='fa fa-fast-fa-backward '> </i>",
-                            "sPrevious": 	"<?= _PREVIOUS?> <i class='fa fa-chevron-left  '> </i>",
-                            "sNext":     	"<i class='fa fa-chevron-right '> </i> <?= _NEXT?> ",
-                            "sLast":     	"<i class='fa fa-fast-forward '> </i> <?= _LAST?> "
+                            "sFirst":    	"<?= _FRUIT_FIRST?> <i class='fa fa-fast-fa-backward '> </i>",
+                            "sPrevious": 	"<?= _FRUIT_PREVIOUS?> <i class='fa fa-chevron-left  '> </i>",
+                            "sNext":     	"<i class='fa fa-chevron-right '> </i> <?= _FRUIT_NEXT?> ",
+                            "sLast":     	"<i class='fa fa-fast-forward '> </i> <?= _FRUIT_LAST?> "
                         }
                     }
                 });
@@ -431,7 +431,7 @@ class Fruit_igniter{
                 $('.form-group').removeClass('has-error'); // clear error class
                 $('.help-block').empty(); // clear error string
                 $('#modal_form').modal('show'); // show bootstrap modal
-                $('.modal-title').text('<?= _ADD ?>'); // Set Title to Bootstrap modal title
+                $('.modal-title').text('<?= _FRUIT_ADD ?>'); // Set Title to Bootstrap modal title
             }
 
             function _edit_(id)
@@ -454,12 +454,12 @@ class Fruit_igniter{
                         $('[name="<?=$k ?>"]').val(data.<?=$k ?>);
                         <?php endforeach; ?>
                         $('#modal_form').modal('show'); // show bootstrap modal when complete loaded
-                        $('.modal-title').text('<?=_EDIT ?>'); // Set title to Bootstrap modal title
+                        $('.modal-title').text('<?=_FRUIT_EDIT ?>'); // Set title to Bootstrap modal title
 
                     },
                     error: function (jqXHR, textStatus, errorThrown)
                     {
-                        piero_alert("<?=_ERROR ?>","<?=_ERROR_AJAX ?>");
+                        piero_alert("<?=_FRUIT_ERROR ?>","<?=_FRUIT_ERROR_AJAX ?>");
                     }
                 });
             }
@@ -472,7 +472,7 @@ class Fruit_igniter{
             function save()
             {
 
-                $('#btnSave').text('<?= _SAVE2 ?>...'); //change button text
+                $('#btnSave').text('<?= _FRUIT_SAVE2 ?>...'); //change button text
                 $('#btnSave').attr('disabled',true); //set button disable
                 var _dt;
                 var _tmp_serialize;
@@ -503,17 +503,17 @@ class Fruit_igniter{
 //                                $('[name="'+data.inputerror[i]+'"]').next().text(data.error_string[i]); //select span help-block class set text error string
 
                             }
-                            piero_alert('<?=_ERROR ?>',data.error_string)
+                            piero_alert('<?=_FRUIT_ERROR ?>',data.error_string)
                         }
-                        $('#btnSave').text("<?= _SAVE2 ?>"); //change button text
+                        $('#btnSave').text("<?= _FRUIT_SAVE2 ?>"); //change button text
                         $('#btnSave').attr('disabled',false); //set button enable
 
 
                     },
                     error: function (jqXHR, textStatus, errorThrown)
                     {
-                        piero_alert("<?=_ERROR ?>","<?=_ERROR_UPDATE ?>");
-                        $('#btnSave').text('<?= _SAVE2 ?>...'); //change button text
+                        piero_alert("<?=_FRUIT_ERROR ?>","<?=_FRUIT_ERROR_UPDATE ?>");
+                        $('#btnSave').text('<?= _FRUIT_SAVE2 ?>...'); //change button text
                         $('#btnSave').attr('disabled',false); //set button enable
 
                     }
@@ -522,7 +522,7 @@ class Fruit_igniter{
 
             function _delete_(id)
             {
-                _res=confirm('<?=_ASK_DELETE ?>');
+                _res=confirm('<?=_FRUIT_ASK_DELETE ?>');
                 if(_res){
                     // ajax delete data to database
                     $.ajax({
@@ -536,7 +536,7 @@ class Fruit_igniter{
                         },
                         error: function (jqXHR, textStatus, errorThrown)
                         {
-                           alert("<?=_ERROR_DELETE ?>");
+                           alert("<?=_FRUIT_ERROR_DELETE ?>");
                         }
                     });
 
@@ -594,7 +594,7 @@ class Fruit_igniter{
                     break;
                 case ("bool"):
 //                    $row[] = ($k->$key)?_TRUE:_FALSE;
-                    $row[] = ($k->$key)?_TRUE:_FALSE;
+                    $row[] = ($k->$key)?_FRUIT_TRUE:_FRUIT_FALSE;
                     break;
                     case ("input"):
                     $row[] = $k->$key;
@@ -635,8 +635,8 @@ class Fruit_igniter{
             $c++;
             }
             $tmp='<div class="btn-group">';
-            $tmp.=($this->permision["edit"])?'<a class="btn btn-primary" href="javascript:void(0)" title="Edit" onclick="_edit_('."'".$k->id."'".')"><i class="fa fa-edit"></i>'._EDIT.'</a>':null;
-            $tmp.=($this->permision["delete"])?'<a class="btn  btn-danger" href="javascript:void(0)" title="Hapus" onclick="_delete_('."'".$k->id."'".')"><i class="fa fa-close"></i>'._DELETE.'</a>':null;
+            $tmp.=($this->permision["edit"])?'<a class="btn btn-primary" href="javascript:void(0)" title="Edit" onclick="_edit_('."'".$k->id."'".')"><i class="fa fa-edit"></i>'._FRUIT_EDIT.'</a>':null;
+            $tmp.=($this->permision["delete"])?'<a class="btn  btn-danger" href="javascript:void(0)" title="Hapus" onclick="_delete_('."'".$k->id."'".')"><i class="fa fa-close"></i>'._FRUIT_DELETE.'</a>':null;
             $tmp.=(str_replace("[[id]]",$k->id,$this->actions_row) );
 	        $tmp.="</div>";
             $row[] =$tmp;
