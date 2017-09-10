@@ -17,6 +17,17 @@ class Fruit_igniter_core{
 
         $CI =& get_instance();
         //load css and js
+        $this->load_datatable_js_css();
+        $bsjas=$this->javascriptlib;
+        $bscss=$this->css_lib;
+        $data=array('bsjas' => $bsjas ,'bscss' => $bscss,'output'=>$datam);
+        $CI->load->view("header",$data);
+        $CI->load->view($path,$data);
+        $CI->load->view("footer",$data);
+    }
+
+    public function load_datatable_js_css()
+    {
         $this->load_css("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
         $this->load_css("https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css");
         $this->load_css("https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css");
@@ -26,13 +37,7 @@ class Fruit_igniter_core{
         $this->load_js("https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js");
         $this->load_js("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js");
         $this->load_js("https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js");
-
-        $bsjas=$this->javascriptlib;
-        $bscss=$this->css_lib;
-        $data=array('bsjas' => $bsjas ,'bscss' => $bscss,'output'=>$datam);
-        $CI->load->view($path,$data);
     }
-
     //standardad load js  automatic load javascript in header tag
     public function load_js($path)
     {
