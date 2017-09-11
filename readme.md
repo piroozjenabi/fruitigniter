@@ -81,10 +81,25 @@ create index fruit_fruit_group_id_fk
 	on fruit (group_id)
 ;
 </pre>
-<h3> Last Changes </h3>
-<ol>
+<h3> row types </h3>
+<ul>
+<li> "input"     : simple text box </li> 
+<li> "email"     : text box with email format </li>
+<li> "number"    : text box with number format  </li>
+<li> "bool"      : drop down with true or false value </li>
+<li> "date"      : for input date </li>
+<li> "array"     : define and array for drop down </li>
+<li> "select_db" : select one row from database <small>
+ <pre>
+ json_encode(array("select_db","fruit_group","name")
+ </pre>
+ </small> </li>
+</ul>
+<h3> Latest Changes </h3>
+<ul>
+<li> add select_db type for select from other database </li> 
 <li> in language unique define for avoid conflicts   </li>
-</ol>
+</ul>
 <b> Copy right by  <a href="http://www.piero.ir" >piero.ir </a> </b>
 
 

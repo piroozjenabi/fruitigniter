@@ -222,9 +222,17 @@ class Fruit_igniter{
         $CI=&get_instance();
         $this->_validate();
         $data = array();
-	    foreach ($CI->input->post() as $k => $v)
-		   if ($k!='typeIn') $data[$k]=$v;
+        foreach ($CI->input->post() as $k => $v)
+        {if ($k!='typeIn') $data[$k]=$v;
+            if($v=="")$data[$k]=null;//for select db if not selected any value returned null that not errored in db
+        }
         $insert =  $this->save($data);
+        if($insert && isset($this->add_action["model"]))
+        {
+            $CI->load->model($this->add_action["model"] ,"tmp_add_model");
+            $CI->tmp_add_model->{$this->add_action["function"]}();
+        }
+
         echo json_encode(array("status" =>$insert));
     }
     // update row from db from recive ajax post method --b26
@@ -696,7 +704,7 @@ class Fruit_igniter{
                 <input name="<?= $this->column_order[$i] ?>" placeholder="<?= $this->column_title[$i] ?>" class="form-control" type="number">
             <?php break;
             case "bool":
-                echo form_dropdown($this->column_order[$i] ,array(0=>_FALSE,1=>_TRUE));
+                echo form_dropdown($this->column_order[$i] ,array(0=>_FRUIT_FALSE,1=>_FRUIT_TRUE));
              break;
              case "date":
               echo  $CI->element->date_input( $this->column_order[$i]);
@@ -708,7 +716,7 @@ class Fruit_igniter{
                 }
                 else if (strpos($this->column_type[$i],"select_db")) {
 		             $tmp_array = json_decode( $this->column_type[ $i ] );
-                    echo @form_dropdown($this->column_order[$i] ,$CI->element->pselect($tmp_array[1],($tmp_array[2])?$tmp_array[2]:null,($tmp_array[3])?$tmp_array[3]:null,_DEF_ELEMENT,($tmp_array[4])?$tmp_array[4]:null,($tmp_array[5])?$tmp_array[5]:null,null,0));
+                    echo @form_dropdown($this->column_order[$i] ,$CI->fruit_igniter_core->pselect($tmp_array[1],($tmp_array[2])?$tmp_array[2]:null,($tmp_array[3])?$tmp_array[3]:null,_FRUIT_DEF_ELEMENT,($tmp_array[4])?$tmp_array[4]:null,($tmp_array[5])?$tmp_array[5]:null,null,0));
 	             }
 
                 else {

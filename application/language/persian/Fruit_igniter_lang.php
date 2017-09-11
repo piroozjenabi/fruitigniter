@@ -33,3 +33,4 @@ define("_FRUIT_NO","خیر");
 define("_FRUIT_IS_REQUIRED","اجباری می باشد");
 define("_FRUIT_FALSE","غیر فعال");
 define("_FRUIT_TRUE","فعال");
+define("_FRUIT_DEF_ELEMENT","Please select");
