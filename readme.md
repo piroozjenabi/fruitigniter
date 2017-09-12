@@ -100,6 +100,11 @@ create index fruit_fruit_group_id_fk
 <li> add select_db type for select from other database </li> 
 <li> in language unique define for avoid conflicts   </li>
 </ul>
+
+<h3> help piero grp. to develop fruit igniter </h3>
+<div>
+<a href='https://pledgie.com/campaigns/34740'><img alt='Click here to lend your support to: help for develop fruitigniter and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/34740.png?skin_name=chrome' border='0' ></a>
+</div>
 <b> Copy right by  <a href="http://www.piero.ir" >piero.ir </a> </b>
 
 
